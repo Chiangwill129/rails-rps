@@ -1,0 +1,34 @@
+  
+    <div>
+      <a href = "/rock">Play Rock</a>
+      </div>
+    <div>
+      <a href = "/scissors">Play Scissors</a>
+      </div>
+      <div>
+      <a href = "/paper">Play Paper</a>
+      </div>
+  
+  <h2>
+    We played scissors!
+  </h2>
+
+  <h2>
+    They played <%= @random_move %>!
+  </h2>
+
+  <%if @outcome == "won"%>
+    <h2 style = "color: green">
+      We <%= @outcome%>!
+    </h2>
+  <%elsif @outcome == "lost"%>
+    <h2 style = "color: red">
+      We <%= @outcome%>!
+    </h2>
+  <%else%>
+    <h2 style = "color: black">
+      We <%= @outcome%>!
+    </h2>
+  <% end%>
+
+    <a href = "/">Rules</a>
